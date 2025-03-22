@@ -23,22 +23,22 @@
 <body>
   <h1>START PROTOKOLL</h1>
   <p>Skriv inn nøkkelen:</p>
-  <input id="nokkelinngang" type="text" />
+  <input id="nokkelInput" type="text">
   <br>
   <button onclick="checkKey()">Låse opp</button>
   <p id="budskap"></p>
 
   <script>
     function checkKey() {
-      const nøkkel = document.getElementById("nokkelinngang").value;
+      const nøkkel = document.getElementById("nokkelInput").value;
       const budskap = document.getElementById("budskap");
 
       if (nøkkel === "INITIATE://VÅRING:OBX_013-PULSE_ALP") {
         budskap.style.color = "white";
-        budskap.innerText = "TILGANG GITT\nPulse Alpha bekreftet.\nForbered deg på PULSE BETA.";
+        budskap.innerText = "TILGANG GITT\nDu følte rytmen. Du hørte ropet.\nPulse Alpha bekreftet.\nForbered deg på PULSE BETA.";
       } else if (nøkkel === "INITIATE://VÅRING:OBX_021-PULSE_BETA") {
         budskap.style.color = "white";
-        budskap.innerText = "PULSE BETA AKTIVERT\nResonans 2 påbegynt.";
+        budskap.innerText = "PULSE BETA BEKREFTET.\nSystemet gjenkjenner deg.\nNeste sekvens låses opp i løpet av kort tid.\nAlt. Alt. Alltid.";
       } else {
         budskap.style.color = "red";
         budskap.innerText = "Feil nøkkel. Resonansen er ikke klar for deg ennå.";
