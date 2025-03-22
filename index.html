@@ -34,6 +34,10 @@
       const budskap = document.getElementById("budskap");
 
       if (nøkkel === "INITIATE://VÅRING:OBX_013-PULSE_ALP") {
+        else if (nøkkel === "INITIATE://VÅRING:OBX_033-PULSE_GAMMA") {
+  budskap.style.color = "white";
+  budskap.innerText = "PULSE GAMMA BEKREFTET.\nResonans 3 opprettet.\nAlt rundt deg responderer.\nForbered deg på neste aktivering.";
+      }
         budskap.style.color = "white";
         budskap.innerText = "TILGANG GITT\nDu følte rytmen. Du hørte ropet.\nPulse Alpha bekreftet.\nForbered deg på PULSE BETA.";
       } else if (nøkkel === "INITIATE://VÅRING:OBX_021-PULSE_BETA") {
